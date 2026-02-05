@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="logo.png" alt="SimpleSIEM logo" width="300">
+</p>
+
 ## Présentation
 Ce projet développé lors de mon année d'étude à l'Université du Québec à Chicoutimi (UQAC) vise à configurer et déployer un SIEM (Security Information and Event Management) opérationnel à la volée. SimpleSIEM est livré avec cinq signatures préenregistrées afin de détecter les scénarios d'attaque suivant:
 - Reconnaissance de l'infrastructure
