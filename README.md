@@ -1,21 +1,39 @@
 <p align="center">
-  <img src="logo.png" alt="SimpleSIEM logo" width="300">
+  <img src="assets/logo.png" alt="SimpleSIEM logo" width="300">
 </p>
 
 ## Présentation
-Ce projet développé lors de mon année d'étude à l'Université du Québec à Chicoutimi (UQAC) vise à configurer et déployer un SIEM (Security Information and Event Management) opérationnel à la volée. SimpleSIEM est livré avec cinq signatures préenregistrées afin de détecter les scénarios d'attaque suivant:
+Ce projet développé lors de mon année d'étude à l'Université du Québec à Chicoutimi (UQAC) vise à configurer et déployer un SIEM (Security Information and Event Management) opérationnel à la volée. SimpleSIEM est livré avec cinq signatures préenregistrées et un environnement de test afin d'effectuer et détecter les scénarios d'attaque suivant:
 - Reconnaissance de l'infrastructure
 - Enumération et fuzzing de services web
 - Tentatives de bruteforce d'identifiant web online
 - Téléchargement de fichiers malveillant
 
-Pour consulter et reproduire le déroulement des scénarios d'attaque, vous pouvez consulter le rapport de projet. La pile applicative sous-jacente est composée de:
+Pour consulter et reproduire le déroulement des scénarios d'attaque, vous pouvez consulter le rapport de projet. La pile applicative du SIEM a été réalisée avec:
+<div align="center">
+ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/elasticsearch/elasticsearch-original-wordmark.svg" width=200 height=200 valign="middle" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kibana/kibana-original-wordmark.svg"  width=150 height=200 valign="middle"/>
+  <img src="assets/logo_syslogng.png" width=180 valign="middle" />
+  <img src="assets/logo_suricata.png" width=125 valign="middle" />
+  <p>
+<p>
+</div>
+
+
+L'environnement de test a été construit avec la pile suivante:
+<div align="center" align-items="center">
+ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/debian/debian-plain-wordmark.svg" width=100 valign="middle" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-plain-wordmark.svg" width=100 valign="middle" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apache/apache-original-wordmark.svg" width=120 valign="middle" />
+   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" width=100 valign="middle"/>
+ </div>
+
 ## Installation
 Veuillez vous référer au guide d'installation de Docker pour pouvoir mettre en place l'environnement d'exécution
 et déployer le projet: https://docs.docker.com/engine/install/
 
 Il vous faudra ensuite télécharger le repos GitHub soit au format zip soit avec l'outil `git`
-- `git clone https://github.com/Nirij3m/SIEM_Stack.git`
+- `git clone https://github.com/Nirij3m/SimpleSIEM.git`
 
 ## Lancement
 Dans le répertoire local du projet cloné, exécuter la commande suivante pour lancer les conteneurs.
@@ -39,7 +57,7 @@ Kibana demandera un token de connexion pour réaliser la liaison avec ElasticSea
 - `docker exec -it elasticsearch /usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kibana` 
 ```shell
 ~/SIEM_Stack$ docker exec -it elasticsearch /usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kibana
-...SNAP...
+...SNIP...
 eyJ2ZXIiOiI4LjE0LjAiLCJhZHIiOlsiMTcyLjE4LjAuMjo5MjAwIl0sImZnciI6ImYyNjNjNDY4OTdhN2E2M2NiYTA4ZGJiNGM0MzU2MzliZjYxNmFkYTEyMmQ5YTJhZTEwN2JmMDM4NzVkZTBjZGMiLCJrZXkiOiJUOE1INFprQmhiVVhyN2NYWVppdTpZUHh2dnJBQkpIVER2SGYtU012dmdBIn0=
 ```
 Kibana demandera ensuite un code de confirmation à récupérer:
