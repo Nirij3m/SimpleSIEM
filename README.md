@@ -1,3 +1,11 @@
+## Présentation
+Ce projet développé lors de mon année d'étude à l'Université du Québec à Chicoutimi (UQAC) vise à configurer et déployer un SIEM (Security Information and Event Management) opérationnel à la volée. SimpleSIEM est livré avec cinq signatures préenregistrées afin de détecter les scénarios d'attaque suivant:
+- Reconnaissance de l'infrastructure
+- Enumération et fuzzing de services web
+- Tentatives de bruteforce d'identifiant web online
+- Téléchargement de fichiers malveillant
+
+Pour consulter et reproduire le déroulement des scénarios d'attaque, vous pouvez consulter le rapport de projet. La pile applicative sous-jacente est composée de:
 ## Installation
 Veuillez vous référer au guide d'installation de Docker pour pouvoir mettre en place l'environnement d'exécution
 et déployer le projet: https://docs.docker.com/engine/install/
@@ -78,7 +86,7 @@ Puis relancez le conteneur syslogng pour appliquer les changements:
 **Attention**, par défaut l'IDPS Suricata écoute le trafic sur l'interface par défaut _eth0_ du conteneur Debian. Si jamais votre instance de Docker Engine attribue un autre nom d'interface réseau pour ce conteneur, l'IDPS ne pourra pas inspecter les paquets et donc fonctionner correctement. Pour remédier à cela, il vous faudra identifier le nom d'interface attribué au conteneur Debian puis de modifier le fichier Dockerfile situé à l'emplacement `/configs/dockerfile_debian.txt` ligne 25 avec: 
 - `...SNAP... /bin/suricata -c /etc/suricata/suricata.yaml -vvv -i NOUVELLE_INTERFACE ...SNAP...`
 
-### Utilisation
+## Utilisation
 Vous pouvez désormais vous connecter à ElasticSearch et configurer les index et visualisations depuis l'interface Kibana à l'adresse:  `http://localhost:5601`. 
 Les index pour stocker les logs devraient être automatiquement créées, si ce n'est pas le cas vous pouvez en créer un manuellement dans l'onglet `Index Management` de ElasticSearch. L'index devra s'appeler `logs` et un autre `alerts`. Si vous souhaitez un nom d'index personnalisé vous devrez éditer le champ de la configuration ci-dessus: `index("VOTRE_NOM_INDEX")` et redémarrer le conteneur syslogng.
 
