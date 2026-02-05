@@ -9,24 +9,31 @@ Ce projet développé lors de mon année d'étude à l'Université du Québec à
 - Tentatives de bruteforce d'identifiant web online
 - Téléchargement de fichiers malveillant
 
-Pour consulter et reproduire le déroulement des scénarios d'attaque, vous pouvez consulter le rapport de projet. La pile applicative du SIEM a été réalisée avec:
+Pour consulter et reproduire le déroulement des scénarios d'attaque, vous pouvez consulter le rapport de projet. 
+La pile applicative du SIEM a été réalisée avec:
 <div align="center">
- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/elasticsearch/elasticsearch-original-wordmark.svg" width=200 height=200 valign="middle" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kibana/kibana-original-wordmark.svg"  width=150 height=200 valign="middle"/>
-  <img src="assets/logo_syslogng.png" width=180 valign="middle" />
-  <img src="assets/logo_suricata.png" width=125 valign="middle" />
-  <p>
-<p>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/elasticsearch/elasticsearch-plain-wordmark.svg" height="220">
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kibana/kibana-plain-wordmark.svg" height="200" >
+  &nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+<div align="center">
+  <img src="assets/logo_syslogng.png" height="60" valign="middle">
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="assets/logo_suricata.png" height="120" valign="middle">
 </div>
 
-
+<br>
 L'environnement de test a été construit avec la pile suivante:
 <div align="center" align-items="center">
  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/debian/debian-plain-wordmark.svg" width=100 valign="middle" />
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-plain-wordmark.svg" width=100 valign="middle" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apache/apache-original-wordmark.svg" width=120 valign="middle" />
    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" width=100 valign="middle"/>
+    &nbsp;&nbsp;&nbsp;&nbsp;
  </div>
+ 
+
 
 ## Installation
 Veuillez vous référer au guide d'installation de Docker pour pouvoir mettre en place l'environnement d'exécution
